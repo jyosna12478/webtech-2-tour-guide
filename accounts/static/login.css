@@ -1,0 +1,115 @@
+body, html {
+    height: 100%;
+    margin: 0;
+	background-image: url({% static 'image/rights.jpg' %});
+}
+
+.bgimg {
+    background-image: url("{% static 'image/neurology3.jpg' %}");
+    height: 130%;
+	padding-top:80px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    margin: auto;
+    width: 40%;
+}
+.loginbox{
+    width:320px;
+    height:420px
+    background:gray;
+    color:#fff;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+.avatar{
+    width: 100px;
+    height:100px;
+    border-radius: 75%;
+    position: center;
+    top:-28px;
+    left:48%;
+}
+/* Add styles to the form container */
+.container {
+    position: absolute;
+    
+    left: 20%;
+    margin: 20px;
+    float: center;
+    width: 50%;
+    height: :625px;
+    opacity:0.85;
+    padding: 10px;
+    background-color: gray;
+    border-radius: 5%;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 93%;
+    padding: 15px;
+    margin: 5px 0 19px 0;
+    border: none;
+    border-radius: 5%;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit button */
+.btn1 {
+    display: inline;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2%;
+    opacity: 0.9;
+}
+
+.btn2 {
+    background-color: blue;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn1,.btn2:hover {
+    opacity: 1;
+}

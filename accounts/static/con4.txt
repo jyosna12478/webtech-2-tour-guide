@@ -1,0 +1,6 @@
+<font color="deepskyblue" size="+2"><b >Effiel Tower</b></br></font>
+
+Whether you're lucky enough to have visited Paris or have only ever dreamed of going there, chances are you know of the French capital's most beloved landmark: the Eiffel Tower.
+
+The Eiffel Tower, La Tour Eiffel in French, was the main exhibit of the Paris Exposition — or World's Fair — of 1889. It was constructed to commemorate the centennial of the French Revolution and to demonstrate France's industrial prowess to the world. ;
+<img src='/static/images/eiffel.jpg' style="height: 300px" />

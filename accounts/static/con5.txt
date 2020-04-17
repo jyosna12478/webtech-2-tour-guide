@@ -1,0 +1,4 @@
+<font color="deepskyblue" size="+2"><b >Burj Khalifa</b></br></font>
+Burj Khalifa, literally means Khalifa Tower. Formerly known as Burj Dubai or Dubai Tower, which was changed to Burj Khalifa when the tower officially opened on January 4th 2010. Khalifa is derived from the name of Sheikh Khalifa Bin Zayed Al Maktoum, who is the president of Adu Dhabi as well as United Arab Emirates, Burj Khalifa and other construction projects in Dubai were once on the verge of halting due to the attack of Financial Crisis, it was neighbor Adu Dhabi provided funds to Dubai in the hard time, this is the main reason for Dubai to rename the tower Burj Khalifa, additionally the word Khalifa has a important significance in Islam, it means Islamic world's supreme leader.;
+
+<img src='/static/images/burj.jpg' style="height: 300px" />

@@ -1,0 +1,6 @@
+<font color="deepskyblue" size="+2"><b >Machu Picchu</b></br></font>
+
+Machu Picchu is a 15th-century Inca site located on a ridge between the Huayna Picchu and Machu Picchu mountains in Peru. It sits 7,970 feet (2,430 meters) above sea level on the eastern slope of the Andes and overlooks the Urubamba River hundreds of feet below.
+
+The site’s excellent preservation, the quality of its architecture, and the breathtaking mountain vista it occupies has made Machu Picchu one of the most famous archaeological sites in the world today. ;
+<img src='/static/images/mp.jpg' style="height: 300px" />
