@@ -1,0 +1,6 @@
+<font color="deepskyblue" size="+2"><b >Taj Mahal</b></br></font>
+
+For first-time visitors to India, it’s almost impossible to skip the bucket list-worthy Taj Mahal. The mausoleum in Agra is India’s most famous monument, and a sublime shrine to eternal love. Built from between 1632 and 1647 by the Mughal Emperor Shah Jahan, the Taj Mahal was dedicated to Jahan’s favorite wife, Mumtaz Mahal, who died during childbirth. But despite its iconic stature, much of its history is still shrouded in mystery. Here are a few things about the marble-clad marvel you might not have known.;
+<img src='/static/images/taj.jpg' style="height: 300px" />
+
+
