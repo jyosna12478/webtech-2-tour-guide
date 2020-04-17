@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+<channel>
+	<title>About</title>
+	<link>https://variety.com</link>
+	<description />
+	<lastBuildDate>Mon, 17 Feb 2020 03:42:47 +0000</lastBuildDate>
+	<language>en</language>
+	<ttl>3</ttl>
+	<generator>http://wordpress.com/</generator>
+
+<image>
+	<url>https://pmcvariety.files.wordpress.com/2018/06/variety-favicon.png?w=32</url>
+	<title>Variety</title>
+	<link>https://variety.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+<cloud domain="variety.com" port="80" path="/?rsscloud=notify" registerProcedure="" protocol="http-post" />
+<atom:link rel="search" type="application/opensearchdescription+xml" href="https://variety.com/osd.xml" title="Variety" />
+	
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/VarietyFestivalNews" /><feedburner:info xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" uri="varietyfestivalnews" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://variety.com/?pushpress=hub" />
+	
+		<item>
+		<title>About Travel Around</title>
+
+
+					<description>HELLO Travel Around aims to increase awareness of many tourist attractions, to encourage and support travel. Founded in 2020 to satisfy the growing demand for trusted information and knowledge about tourism. Travel Around's mission is to represent all the components of  Travel Around Company and to promote and facilitate increased inbound travel.<br/> We handle all types of travel; everything from airline tickets, Indidian and International tours, packaged vacations in India, the United States and abroad, cruises and hotel bookings. We're also experts in travel to the island paradise of Cuba. <br/> We're also specialists in educational and youth organization tour travel. Our student travel services are second to none, which enables us to provide your student or youth organization group with excellent tours across the world. Whether you're a seasoned traveller, or a first timer, our goal is to ensure your vacation exceeds your expectations. </description>
+		
+					
+	</item>
+		<item>
+		<title>Our Vision</title>
+		
+
+					<description>Travel Around seeks to enhance the corporate management tools to improve the service while reducing your travel costs. We manage almost every type of travel needs, from simplest to the complex, and create an unparalleled experience that our customers could rely on. We aim to maintain our vision of high class travel services at reasonable prices through consistent leadership, controlled growth and excellent commitment.Keeping our vision, “value for money and client satisfaction” as a compass. The number of passengers serviced annually today, is more than ten times higher than that we serviced on annual basis when we first started up. <br/>
+
+Travel Around Vision is one of the few organizations that can offer all over the world a full spectrum of tourism services with flexible and efficient solutions, as a one stop supplier. The services we provide are of a high standard as well as to save both time and money. <br/>
+We invite you to share our vision and benefit from our expertise, professionalism, flexibility, personalized approach, strong purchasing power and comprehensive product portfolio.</description>
+		
+					
+	</item>
+		<item>
+		<title>Our Mission</title>
+		
+
+					<description>Travel Around seeks to manage the travel requirements of your company and add value to your travel spend. We tend to focus on the customers’ requirements to come up with effective strategies for meeting their demands in an efficient manner. Our mission is to offer corporate travel solutions and become the biggest travel agency in the World. Efficiency, Flexibility and Quality Service with a Personal Touch, combined with strong purchasing advantages and Value for Money.<br/>
+We’re committed to offer competitive value for money and high level services in order to achieve total client satisfaction. We want to meet and exceed all business clients ‘goals and objectives, strive for excellence in quality, integrity, professionalism and value in all we do.<br/>
+The Company offers packages in the most sought after international tickets, passport and visa assistance, pilgrim tours, inbound and outbound tours as well as to the most popular destinations Worldwide. </description>
+		
+					
+	</item>
+		<item>
+		<title>Safety Information</title>
+		
+
+					<description><b>TRANSPORTATION SAFETY TIPS:</b><br/>
+While traveling you should always keep in mind certain transportation safety tips as well:-
+ Always choose the safest mode of transport for traveling. Do check its previous safety track record.<br/>
+Be mindful of other passengers traveling with you and never hesitate to report any suspicious act to the concerned authorities.<br/>
+ Never share cab or taxi with strangers. As carjacking is the biggest threat for a traveler.<br/>
+  While traveling by flight, always pay attention to the preflight briefing about closest emergency exit door, fastening your seat belts properly, applying oxygen masks and other important details to be followed in case of emergency.<br/>
+    Do not ignore all significant details provided by flight attendant. They are prime source of aid in case of emergency and unexpected turbulence.<br/>
+    Wear money belts, hidden neck and waist pouches, hidden pocket wallets and zippered compartments under your clothes to avoid pick pocketing.<br/><br/></description>
+		
+					
+	</item>
+		<item>
+		<title>Safety Information</title>
+		
+
+					<description><b>HOTEL SAFETY TIPS: </b><br/><br/>
+
+Choosing the safest accommodation at an unknown place could be a biggest concern for you. Therefore be aware of certain tips while choosing a safest hotel for your self.<br/>
+
+    Never hesitate to choose the best and safest hotel in town.<br/>
+    Always carry all the important documents with you while going out of your hotel room.<br/>
+    Double check window and door locks before leaving the hotel room.<br/>
+    Prefer to keep your important luggage at receptions locker.<br/>
+    Get well versed with emergency exits, fire escapes, emergency stairwells to be used in case of emergency.<br/>
+     To make most out of your trip these basic general safety tips can prove to be very helpful.</description>
+		
+					
+	</item>
+	</channel>
+</rss>
