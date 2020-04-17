@@ -1,0 +1,183 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<style type="text/css">
+	* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    position: absolute;
+    top:13%;
+    left: 25%;
+    margin: 20px;
+    float: center;
+    width: 700px;
+    height: :700px;
+    opacity:0.85;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5%;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+.bgimg {
+    background-image: url('{% static 'image/heart.jpg' %}');
+    height: 130%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: black;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+</style>
+
+<body style = "background-image: url('{% static 'images/bg.jpg' %}');">
+<div class="bgimg">
+  
+ <div class="container">
+				{% block content%}
+				{%endblock %}</div>
+                 </div>   
+        <h4 style="color:green;font-family: serif;font-size: 40px";><b>TRAVEL AROUND</b></h4>
+<p style="color:#000;font-family: serif;font-size: 20px"><b>Need help with choosing Packages?<br/>
+                        We have our Travel experts to help you!</b></p>
+<h5 style="color:#000;font-size: 20px;"><span class="img1"></span>(+91) 9876543120&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;(+91) 9876543210</h5>
+<h5 style="color:#000;font-size: 20px;"><span class="img2"></span><a href="#">expert.1@gmail.com</br></a></h5>            
+           
+		<script>
+		
+$(function()
+{
+    function after_form_submitted(data) 
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' ); 
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+            
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' ); 
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+        
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json' 
+            });        
+        
+      });	
+});
+</script>
+    </body>
+</html>

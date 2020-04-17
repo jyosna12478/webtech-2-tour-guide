@@ -1,0 +1,39 @@
+{% extends 'base1.html' %}
+
+{% block content %}
+
+  <div id="container" style="width: 75%;">
+    <canvas id="card1" data-url="{% url 'card1' %}"></canvas>
+  </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<div id="container"></div>
+<script>
+  Highcharts.chart('container', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Male vs Female Enquiry count per Category'
+      },
+      xAxis: {
+          categories: [
+            {% for entry in dataset %}'{{ entry.Category }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
+          ]
+      },
+      series: [{
+          name: 'Male',
+          data: [
+            {% for entry in dataset %}{{ entry.survived_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+          ],
+          color: 'LightBlue'
+      }, {
+          name: 'Female',
+          data: [
+            {% for entry in dataset %}{{ entry.not_survived_count }}{% if not forloop.last %}, {% endif %}{% endfor %}
+          ],
+          color: 'Green'
+      }]
+  });
+</script>
+{% endblock %}

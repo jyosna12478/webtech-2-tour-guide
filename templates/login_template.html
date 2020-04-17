@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>{% block title %}{% endblock %} </title>
+<link rel="stylesheet" href="{% static 'login.css' %}">
+<body style = "background-image: url('{% static "images/bg.jpg" %}');">
+
+<div class="bgimg">
+  
+    <div class="container">
+	<main>
+    {% block content %}
+    {% endblock %}
+  </main>
+    
+  </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'cat_template.html' %}
+
+{% block title %}Family Tours{% endblock %}
+
+
+
+{% block content %}
+	{% for post in categoryf %}
+	<div>
+		<p ><font color="	#A04000	" size="+2"><b>{{ post.subcategory }}<b><br></font>
+			<font color="#A04000">Packages :</font>{{ post.packages }} </br>
+			<font color="#008080">Price :</font>{{ post.price }}</br>
+			<font color="#A04000"></font>{{ post.information }}</br>
+			<a href = "{% url 'app_new' %}" ><button class="button"  >Enquiry</button></a>
+			
+	</div>
+	{% endfor %}
+	
+	
+{% endblock %}

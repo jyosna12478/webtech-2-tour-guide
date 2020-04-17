@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <title>About</title>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      
+</head>
+
+<body onload="getRssFeed()">
+  
+
+  <div id="divRss">
+
+    </div>
+    
+    <script>
+        var ttl = 2;
+        
+            var xml = null;
+            getRssFeed =  function()
+            {
+
+                console.log("called TTL: "+ ttl);
+                var divRss = document.getElementById("divRss");
+                divRss.innerHTML = "";
+                this.xml = new XMLHttpRequest();
+                this.xml.open("GET", "{% static 'rss.xml' %}");
+                this.xml.onreadystatechange = this.displayRssFeed;
+                this.xml.send();
+            }
+
+            function readMore(i)
+            {
+                console.log(i);
+                console.log("i have been called");
+                var desItem = document.getElementById("item"+i);
+                desItem.innerHTML = localStorage.getItem("item"+i);
+                var anchorItem = document.getElementById("anchor"+i);
+                anchorItem.style.display="none";
+            }
+
+            displayRssFeed = function()
+            {
+                var divRss = document.getElementById("divRss");
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    var rootRss = this.responseXML.documentElement;
+                     ttl = parseInt(rootRss.getElementsByTagName("ttl")[0].innerHTML);
+
+                    var rssItems = rootRss.getElementsByTagName("item");
+                    setTimeout(getRssFeed, ttl*2000);
+                    for(var i=0; i<rssItems.length; ++i)
+                    {
+                        item = rssItems[i];
+                        title = item.getElementsByTagName("title")[0].innerHTML;
+                        description = item.getElementsByTagName("description")[0].innerHTML;
+                        //link = item.getElementsByTagName("link")[0].innerHTML;
+                        //console.log(link);
+                        var divItem = document.createElement("div");
+                        var divTitle = document.createElement("a");
+                        //divTitle.href = "https://www.google.com";
+                        divTitle.innerHTML = title;
+                        var divDescription = document.createElement("p");
+                        if(description.length > 200)
+                        {
+                            
+                            window.localStorage.setItem("item"+i, description);
+                            description = description.slice(0, 200);
+                            description+="...";
+                            var anchor = document.createElement("div");
+                            anchor.style.color = "blue";
+                            anchor.style.textDecoration = "underline";
+                            anchor.style.cursor= "pointer";
+                            anchor.innerHTML = "read more";
+                            anchor.setAttribute("onclick", "readMore("+i+");");
+                            anchor.id = "anchor"+i;
+                            console.log(anchor.addEventListener);
+                            divDescription.innerHTML = description;
+                            divDescription.appendChild(anchor);
+                        }
+                        else
+                        {
+                            divDescription.innerHTML = description;
+                        }
+                        divDescription.id = "item"+i;
+                        divItem.className = "rssitem";
+                        divTitle.className = "rssTitle";
+                        divDescription.className = "rssDes";
+                        divItem.appendChild(divTitle);
+                        divItem.appendChild(divDescription);
+                        divRss.appendChild(divItem);
+                        divRss.innerHTML+="<br>";
+                    }
+                }
+            }
+        
+    </script>
+  
+   <script type="text/javascript">  
+
+   $(document).ready(function() {
+      // grab the initial top offset of the navigation 
+        var stickyNavTop = $('.menu-bar').offset().top;
+        
+        // our function that decides weather the navigation bar should have "fixed" css position or not.
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+               
+          // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+          // otherwise change it back to relative
+          if (scrollTop > stickyNavTop) { 
+              $('.menu-bar').addClass('sticky');
+          } else {
+              $('.menu-bar').removeClass('sticky'); 
+          }
+      };
+
+      stickyNav();
+      // and run it again every time you scroll
+      $(window).scroll(function() {
+        stickyNav();
+      });
+    });
+ </script>
+{% endblock %}
+</body>
+</html>

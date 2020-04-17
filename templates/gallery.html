@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'homepagestyle.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function init(){
+			xhr = new XMLHttpRequest;	
+			if(xhr)
+			{
+				xhr.onreadystatechange = getContent;
+				xhr.open("GET", "{% static 'con2.txt' %}");
+				xhr.send(null);
+			}	
+		}
+
+		function getContent(){
+		
+		if(xhr.readyState=="4"&&xhr.status==200){
+				var arr=(xhr.responseText).split(";");
+				document.getElementById("content1").innerHTML=arr[0];
+				document.getElementById("img1").innerHTML=arr[1];
+				setTimeout(getSecdiv, 4000);
+					
+		  }
+		}
+
+		function getSecdiv()
+		{
+			xhr.open("GET", "{% static 'con4.txt' %}", true);
+			xhr.onreadystatechange = getSecImg;
+			xhr.send(null);
+		}
+
+		function getSecImg()
+		{
+			
+				if(xhr.readyState=="4"&&xhr.status==200){
+				var arr=(xhr.responseText).split(";");
+				console.log(arr[0]);
+				console.log(arr[1]);
+
+				document.getElementById("content2").innerHTML=arr[0];
+				document.getElementById("img2").innerHTML=arr[1];
+				setTimeout(getSdiv, 4000);
+				
+					
+		  }
+
+		}
+
+		function getSdiv()
+		{
+			xhr.open("GET", "{% static 'con5.txt' %}", true);
+			xhr.onreadystatechange = getSImg;
+			xhr.send(null);
+		}
+
+		function getSImg()
+		{
+			
+				if(xhr.readyState=="4"&&xhr.status==200){
+				var arr=(xhr.responseText).split(";");
+				console.log(arr[0]);
+				console.log(arr[1]);
+
+				document.getElementById("content3").innerHTML=arr[0];
+				document.getElementById("img3").innerHTML=arr[1];
+				setTimeout(getSediv, 4000);
+				
+					
+		  }
+
+		}
+
+		function getSediv()
+		{
+			xhr.open("GET", "{% static 'con6.txt' %}", true);
+			xhr.onreadystatechange = getSeImg;
+			xhr.send(null);
+		}
+
+		function getSeImg()
+		{
+			
+				if(xhr.readyState=="4"&&xhr.status==200){
+				var arr=(xhr.responseText).split(";");
+				console.log(arr[0]);
+				console.log(arr[1]);
+
+				document.getElementById("content4").innerHTML=arr[0];
+				document.getElementById("img4").innerHTML=arr[1];
+				
+					
+		  }
+
+		}
+
+		
+
+
+
+
+	</script>
+
+	</head>
+
+<body onload="init()">
+
+
+
+	 <div style="width: 100%;padding-top: 10px">
+        <div style="width: 50%; height: 300px; float: left; "> 
+            <p style="text-align: center;padding-top: 80px;padding-left: 30px" id="content1">
+	
+</p>
+        </div>
+        <div style="margin-left: 50%; height: 300px;padding-left: 30px;" id="img1"> 
+		           
+
+
+        </div>
+    </div>
+
+
+
+<div style="width: 100%;">
+        <div style="width: 50%; height: 300px; float: left;padding-left: 30px;padding-top: 50px " id="img2"> 
+            
+        </div>
+        <div style="margin-left: 50%; height: 300px;padding-top: 80px;padding-right:160px" > 
+		           
+<p style="text-align: center;" id="content2">
+	
+</p>
+
+        </div>
+    </div>
+
+
+
+	 <div style="width: 100%;padding-top: 10px">
+        <div style="width: 50%; height: 300px; float: left; "> 
+            <p style="text-align: center;padding-top: 80px;padding-left: 30px" id="content3">
+	
+</p>
+        </div>
+        <div style="margin-left: 50%; height: 300px;width:300px;padding-left: 30px;" id="img3"> 
+		           
+
+
+        </div>
+    </div>
+
+<div style="width: 100%;">
+        <div style="width: 50%; height: 300px; float: left;padding-left: 30px;padding-top: 50px " id="img4"> 
+            
+        </div>
+        <div style="margin-left: 50%; height: 300px;padding-top: 80px;padding-right:160px" > 
+		           
+<p style="text-align: center;" id="content4">
+	
+</p>
+
+        </div>
+    </div>
+
+
+
+
+
+    
+{% endblock %}
+
+
+
+    
+</body>
+
+</html>

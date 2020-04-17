@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<style>
+body {margin:0;font-family:Arial}
+
+.header-section {
+      margin:0;
+      padding: 2px 20px;
+      text-align: left;
+      color:#77ab59;
+      font-weight: bold;
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-family:"Sans";
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: deepskyblue;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.active {
+  background-color: grey;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;    
+  border: none;
+  outline: none;
+  color: deepskyblue;
+  padding: 20px 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: deepskyblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: deepskyblue;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: deepskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+.rssitem{
+            border-spacing: 20px 20px;
+            border: 5px solid deepskyblue;
+            padding: 20px;
+            padding-left: 20px;
+        }
+ .rssTitle{
+            text-decoration: underline solid;
+            font-size: 30px;
+            color:#77ab59;
+
+        }
+  .rssDes{
+
+    font-size: 20px;
+    font-family: italic;
+
+  }
+  * {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    position: absolute;
+    top:13%;
+    left: 25%;
+    margin: 20px;
+    float: center;
+    width: 700px;
+    height: :700px;
+    opacity:0.85;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5%;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.bgimg {
+    background-image: url('{% static 'image/heart.jpg' %}');
+    height: 130%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: black;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="header-section">
+                  <img src="{%static 'images/translogo.png' %}" height="60px" width="60px">
+                              TRAVEL AROUND
+                              <span style="font-size: 30px; letter-spacing: 2px; font-family:Sans;color: deepskyblue">&nbsp&nbsp&nbsp&nbspThe world is waiting for you...</span>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="{% url 'about' %}">About</a>
+  <a href="{% url 'gallery' %}">Gallery</a>
+  <div class="dropdown">
+    <button class="dropbtn">Category
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{% url 'familytour' %}">Family Tours</a>
+      <a href="{% url 'religioustour' %}">Religious Tours</a>
+      <a href="{% url 'solotrip' %}">Solo Trips</a>
+      <a href="{% url 'adventuretour' %}">Adventure Tours</a>
+    </div>
+  </div> 
+  <a href="{% url 'app_new' %}">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Stats
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{% url 'pie_chart' %}">Pie Chart</a>
+      <a href="{% url 'column_chart' %}">Column Chart</a>
+      <a href="{% url 'graph' %}">Bar Chart</a>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  <a style="float:right" href = "{% url 'logout' %}" >Logout </a>
+</div>
+  
+
+  
+
+</div>
+
+
+
+{% block content %}
+{%endblock %}
+
+
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p> hospital</p>
+{% if user.is_authenticated %}
+  <div style="background-color: white;width:700px;height:700px;top:35%;left:25%;position:absolute;">
+	<p> <b><font color="#1A5276" size="+2">About Our Hospitals</font></b></br>
+<p style="font-family: serif; font size: 25px;">The CARE Hospitals Group is a multispecialty healthcare provider, with 14 hospitals serving 6 cities across 5 states of India. The regional leader in tertiary care in South/Central India and among the top 5 pan-Indian hospital chains, CARE Hospitals delivers comprehensive care in more than 30 specialties in tertiary care settings.</p>
+</br>
+
+
+<p style="font-family: serif; font size: 25px;">Adopting a service-oriented delivery model, CARE Hospitals provides cost-effective medical care, with an uncompromising commitment to its core purpose, “To provide care that people trust.” Founded in 1997 by Dr B Soma Raju and a team of India’s leading cardiologists, the CARE Hospitals’ founders developed Asia’s first indigenous coronary stent — the ‘Kalam-Raju stent,’ named after Dr APJ Abdul Kalam, former President of India, and Dr B Soma Raju, Chairman and Managing Director, CARE Hospitals Group. This is just one of the many innovations developed at CARE Hospitals, which strives to make healthcare affordable for all, while ensuring clinical outcomes at par with international standards.</p>
+</br>
+
+
+The CARE team has many firsts to its credit:
+
+1st Prospective randomised trial of balloon valvotomy vs mitral valve replacement in the world
+1st Coronary Angioplasty in India
+2nd Balloon Valvuloplasty in India
+1st Cardiac MRI in India
+1st Atrial Fibrillation Clinic in India
+1st Beating Heart Surgery in Andhra Pradesh
+1st Heart Transplant Performed in a tier-2 town (Visakhapatnam)
+Today the CARE Hospitals Group comprises 14 multi superspecialty hospitals offering comprehensive patient-focused care, with state-of-the-art infrastructure, medical equipment and facilities, complemented by globally trained and experienced doctors and professional support staff, available 24*7. It is recognized as the most advanced, complete cardiac care centre in the country, powered by cross-functional teams with deeper skill sets and round-the-clock availability of cardiologists, cardiac surgeons, critical care and emergency medicine specialists. The hospitals are models for high doctor-patient and nurse-patient ratios to ensure patient satisfaction.
+
+CARE Hospitals is a complete healthcare ecosystem, with related components of education/training and research, pursuing innovations that make healthcare more affordable. A network of telemedicine hubs in rural Andhra Pradesh and Maharashtra deliver care at the doorstep to lakhs of people. These activities are managed by its partner CARE Foundation.
+
+CARE Hospitals continually updates medical knowledge and puts it into practice — taking innovations from the bench to the bedside. The Group has a rigorous Clinical Research programme (certified by the Drugs Controller General of India), with advanced infrastructure and trained resources to conduct clinical trials in the areas of drug and medical device development. Both pioneering original research and sponsored clinical trials are conducted at several hospitals and over 40 studies are under way, at any given time.
+
+CARE Hospitals is owned and managed by Quality CARE India Ltd.
+</p></div>
+<div class="navbar" >
+  <a href="homepage.html">About</a>
+  <a href="contact.html">Branches</a>
+  <div class="dropdown">
+    <button class="dropbtn">Specialists
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="card.html">Cardiologist</a>
+      <a href="Pediatricinas.html">Pediatricians</a>
+      <a href="gynic.html">Gynecologists</a>
+      <a href="onc.html">Onclogists</a>
+      <a href="neuro.html">Neurologists</a>
+      <a href="derm.html">Dentists</a>
+      <a href="ent.html">ENT</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+  <button class="dropbtn">For Patients
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="healthtips.html">Health Tips</a>
+      <a href="rights.html">Patients Rights and Responsibilities</a>
+    </div>
+  
+  <a href="appointment.html">Appointment</a>
+</div>
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,118 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!--<div class="w3-content w3-display-container">
+  
+  <img class="mySlides" src="{% static 'image/neurology3.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{% static 'image/oncologynew.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{% static 'image/kidscheckup.jpg' %}" style="width:100%">
+  <img class="mySlides" src="{% static 'image/onco2.jpg' %}" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+
+
+-->
+
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img class="img1" src="{% static 'images/m1.jpg' %}" style="width: 100%;height: 100%">
+  <div class="text"><b></b></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img class="img1" src="{% static 'images/m2.jpg' %}" style="width: 100%;height: 100%">
+  <div class="text"><b> </b></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img class="img1" src="{% static 'images/m5.png' %}" style="width: 100%;height: 100%">
+  <div class="text"><b></b></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img class="img1" src="{% static 'images/m3.jpg' %}" style="width: 100%;height: 100%">
+  <div class="text"><b></b></div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img class="img1" src="{% static 'images/m4.jpg' %}" style="width: 100%;height: 100%">
+  <div class="text"><b></b></div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+var myIndex = 0;
+slideshow();
+
+function slideshow() 
+{
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) 
+    {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(slideshow, 3000); 
+}
+
+
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<script type="text/javascript">  
+
+   $(document).ready(function() {
+      // grab the initial top offset of the navigation 
+        var stickyNavTop = $('.topnav').offset().top;
+        
+        // our function that decides weather the navigation bar should have "fixed" css position or not.
+        var stickyNav = function(){
+          var scrollTop = $(window).scrollTop(); // our current vertical position from the top
+               
+          // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+          // otherwise change it back to relative
+          if (scrollTop > stickyNavTop) { 
+              $('.topnav').addClass('sticky');
+          } else {
+              $('.topnav').removeClass('sticky'); 
+          }
+      };
+
+      stickyNav();
+      // and run it again every time you scroll
+      $(window).scroll(function() {
+        stickyNav();
+      });
+    });
+ </script>
+
+{% endblock %}
+
+
+	

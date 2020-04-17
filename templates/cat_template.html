@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>{% block title %}{% endblock %} </title>
+<link rel="stylesheet" href="{% static 'cat.css' %}">
+<body style = "background-image: url('{% static "images/m2.jpg" %}');background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: cover;
+	opacity: 1;">
+<img align = "right" src = "{% static 'images/translogo.png' %}" style="width:250px;height:250px;"></img>
+
+	<main>
+    {% block content %}
+    {% endblock %}
+  </main>
+    
+ 
+
+
+
+</body>
+</html>

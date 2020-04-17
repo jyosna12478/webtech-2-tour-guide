@@ -1,0 +1,21 @@
+
+{% extends 'login_template.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<form method="post">
+<h2 style="text-align:center;font-family: Lucida Sans Unicode, Lucida Grande, sans-serif">
+      <img class="avatar" src="{% static 'images/logo.jpg' %}"><br>
+      Login
+    </h2>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" value = "login" class="btn1" style="background-color:deepskyblue">Login</button>
+</form>
+<br>
+New user Register here :<a href= "{% url 'signup' %}"> <font color = "green">Signup</font></a>
+{% endblock %}
+

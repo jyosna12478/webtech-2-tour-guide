@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Chart.js Example{% endblock %}</title>
+</head>
+<body>
+
+  <nav>
+    <a href="{% url 'graph' %}">Bar Chart Ajax</a> 
+  </nav>
+
+  {% block content %}{% endblock %}
+
+</body>
+</html>
